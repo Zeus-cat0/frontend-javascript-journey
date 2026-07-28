@@ -11,7 +11,9 @@
     console.log(`CartQuantity : ${CartQuantity}`);
     ">show Quantity</button>
   <button onclick="
-    CartQuantity = CartQuantity + 1;
+    // CartQuantity = CartQuantity + 1;
+    // CartQuantity += 1;
+    CartQuantity ++; //same as above but shorter
     console.log(`CartQuantity : ${CartQuantity}`);
     
   ">Add to cart</button>
@@ -40,3 +42,17 @@
   </script>
 </body>
 </html>
+
+
+
+<!-- 
+
+Variable Re-assignment Shortcuts
+
+variable = variable + 2     += 2
+variable = variable - 2     -= 2
+variable = variable * 2       *= 2
+
+variable = variable / 2          /= 2
+variable = variable + 1           ++
+variable = variable - 1 -->         --
