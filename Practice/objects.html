@@ -2,30 +2,194 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport">
-  <title>object</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Object</title>
 </head>
+
 <body>
 
-  
   <script>
+
+    // =====================================================
+    // 1. CREATING AN OBJECT
+    // =====================================================
+
     // const product = {
     //   name : 'socks',
     //   price : 1090
     // };
+
     // console.log(product);
     // console.log(product.name);
     // console.log(product.price);
 
+
+    // =====================================================
+    // 2. CHANGING A PROPERTY
+    // =====================================================
+
     // product.name = 'cotton socks';
     // console.log(product);
+
+
+    // =====================================================
+    // 3. ADDING A NEW PROPERTY
+    // =====================================================
+
     // product.newProperty = true;
     // console.log(product);
+
+
+    // =====================================================
+    // 4. DELETING A PROPERTY
+    // =====================================================
 
     // delete product.newProperty;
     // console.log(product);
 
-    
+
+    // =====================================================
+    // 5. OBJECT INSIDE AN OBJECT
+    // =====================================================
+
+    // const product2 = {
+    //   name: 'shirt',
+
+    //   'delivery-time': '1 day',
+
+    //   rating: {
+    //     stars: 4.5,
+    //     count: 87
+    //   },
+
+    //   fun: function function1() {
+    //     console.log('function inside object');
+    //   }
+
+    // };
+
+
+    // =====================================================
+    // 6. ACCESSING OBJECT PROPERTIES
+    // =====================================================
+
+    // console.log(product2);
+    // console.log(product2.name);
+
+    // Dot notation
+    // console.log(product2.name);
+
+    // Bracket notation
+    // console.log(product2['name']);
+
+    // Bracket notation is useful when property name has "-"
+    // console.log(product2['delivery-time']);
+
+
+    // =====================================================
+    // 7. ACCESSING NESTED OBJECT
+    // =====================================================
+
+    // console.log(product2.rating.count);
+
+
+    // =====================================================
+    // 8. FUNCTION INSIDE AN OBJECT = METHOD
+    // =====================================================
+
+    // product2.fun();
+
+
+    // =====================================================
+    // 9. JSON.stringify()
+    // =====================================================
+
+    // console.log(JSON.stringify(product2));
+
+    // const jsonString = JSON.stringify(product2);
+
+    // console.log(jsonString);
+
+
+    // =====================================================
+    // 10. JSON.parse()
+    // =====================================================
+
+    // console.log(JSON.parse(jsonString));
+
+
+    // =====================================================
+    // 11. STRING METHODS
+    // =====================================================
+
+    console.log('hello'.length);
+
+    console.log('hello'.toUpperCase());
+
+
+    // =====================================================
+    // 12. OBJECT REFERENCE
+    // =====================================================
+
+    const object1 = {
+      message: 'hello'
+    };
+
+    const object2 = object1;
+
+    object1.message = 'goodjob';
+
+    console.log(object1);
+    console.log(object2);
+
+
+    // object1 and object2 point to the SAME object
+    // So changing object1 also changes object2.
+
+
+    // =====================================================
+    // 13. OBJECT COMPARISON
+    // =====================================================
+
+    const object3 = {
+      message: 'goodjob'
+    };
+
+    console.log(object1 === object3);
+
+    // This is false because object1 and object3
+    // are two different objects.
+
+
+    // =====================================================
+    // 14. OBJECT SHORTHAND
+    // =====================================================
+
+    const message = 'hello';
+
+    const object4 = {
+      message: message
+    };
+
+    console.log(object4);
+
+
+    // You can write the same thing using shorthand:
+
+    const object5 = {
+      message,
+
+      method() {
+        console.log('method');
+      }
+    };
+
+    console.log(object5);
+
+    object5.method();
+
+
   </script>
+
 </body>
 </html>
